@@ -1,0 +1,94 @@
+html,
+body {
+  background-color: #eee;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+/* Estilo do div principal */
+.app-container {
+  width: 85%;
+  padding: 1rem;
+  margin: auto;
+}
+
+/* Estilo do notebook */
+.notebook {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #fff;
+  background-color: #ccc;
+}
+
+/* Estilo dos botões das abas */
+.notebook button {
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Mudar a cor do botão quando posicionar o mouse */
+.notebook button:hover {
+  background-color: #ddd;
+}
+
+/* Mudar o estilo da aba aberta */
+.notebook button.aberta {
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* Estilo do conteúdo da aba */
+.conteudo {
+  display: none;
+  background-color: #fff;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Estilo do cabeçalho da lista e dos itens pares */
+div .cabecalho-lista,
+div .item-lista {
+  padding: 0 1rem;
+  border: 1px solid #fff;
+  background-color: #ccc;
+}
+
+/* Estilo dos ítens ímpares da lista */
+div .item-lista:nth-of-type(even){
+  background-color: #eee;
+}
+
+/* Estilo dos parágrafos dentro de um item de lista */
+div .cabecalho-lista p,
+div .item-lista p {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Estilo das etiquetas dentro dos itens de lista */
+div .cabecalho-lista p span,
+div .item-lista p span {
+  flex: 0 0 20%;
+}
+
+form {
+  background-color: #ccc;
+}
+
+form > div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+label {
+  padding: .5rem;
+}

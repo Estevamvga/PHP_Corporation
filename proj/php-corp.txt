@@ -1,0 +1,50 @@
+@startuml php-corp
+
+abstract class Funcionário {
+  - matricula: int
+  - nome: string
+  - cpf: string
+  - salario: float
+
+  + getMatricula() : int
+  + getNome() : string
+  + getCPF() : string
+  + getSalario() : float
+  + setMatricula(mat: int) : void
+  + setNome(nome: string) : void
+  + setCPF(cpf: string) : void
+  + setSalario(sal: float) : void
+}
+
+class Operador extends Funcionário {
+  - codFuncao : int
+
+  + getCodFuncao() : void
+  + setCodFuncao(cod : int) : void
+}
+
+class Gerente extends Funcionário {
+  - codDepartamento : int
+  - bonusGerencia : float
+
+  + getCodDepartamento() : int
+  + getBonusGerencia () : float
+  + setCodDepartamento(cod : int) : void
+  + setBonusGerencia : (bns : float) : void
+}
+
+class Application {
+  - listaGerentes : Funcionario[]
+  - listaOperadores : Funcionario[]
+  - appName : string
+
+  + addGerente(grt: Gerente) : void
+  + addOperador(opr: Operador) : void
+  + getListaGerente() : Gerente[]
+  + getListaOpereador() : Operador []
+  + mostraTelaCadastro() : void
+  + mostraTelaConsulta() : void
+  + mostraTelaHome() : void
+}
+
+@enduml
